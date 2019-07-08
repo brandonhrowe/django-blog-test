@@ -2,9 +2,9 @@
 
 {% block body_block %}
 <h1>New Post</h1>
-<form class="post-form" action="POST">
+<form class="post-form" method="POST">
   {% csrf_token %}
-  {% form.as_p %}
+  {{ form.as_p }}
   <button type="submit" class="save btn btn-default">Save</button>
 </form>
 <script>
